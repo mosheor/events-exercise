@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "events-exercise"
+version = "0.1.0"
+description = "Home assignment on dynamic parsing of raw events data"
+authors = ["Or Moshe <ormoshe2204@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
