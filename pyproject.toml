@@ -9,6 +9,12 @@ readme = "README.md"
 python = "^3.12"
 pydantic = "^2.5.3"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff]
+line-length = 120
+select = ["A", "B", "C", "E", "F", "ICN", "UP"]
+include = ["*.py"]
+target-version = "py312"
+
+[tool.ruff.isort]
+combine-as-imports = true
+split-on-trailing-comma = true
