@@ -1,0 +1,88 @@
+{
+  "1": {
+    "class": "evidence_handler.core.serializer.Serializer",
+    "kwargs": {
+      "fields": [
+        {
+          "class": "evidence_handler.core.fields.IntegerField",
+          "kwargs": {
+            "field_name": "user_details.id",
+            "output_field": "Id"
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.StrConcatFields",
+          "kwargs": {
+            "fields": [
+              {
+                "class": "evidence_handler.core.fields.StringField",
+                "kwargs": {
+                  "field_name": "user_details.first_name",
+                  "output_field": null
+                }
+              },
+              {
+                "class": "evidence_handler.core.fields.StringField",
+                "kwargs": {
+                  "field_name": "user_details.last_name",
+                  "output_field": null
+                }
+              }
+            ],
+            "output_field": "Full name",
+            "separator": " "
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.EmailField",
+          "kwargs": {
+            "field_name": "user_details.email",
+            "output_field": "Email"
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.DateTimeField",
+          "kwargs": {
+            "field_name": "user_details.updated_at",
+            "output_field": "Updated at"
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.BooleanField",
+          "kwargs": {
+            "field_name": "security.mfa_enabled",
+            "output_field": "MFA Enabled"
+          }
+        }
+      ]
+    }
+  },
+  "2": {
+    "class": "evidence_handler.core.serializer.Serializer",
+    "kwargs": {
+      "fields": [
+        {
+          "class": "evidence_handler.core.fields.StringField",
+          "kwargs": {
+            "field_name": "name",
+            "output_field": "Name"
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.StringField",
+          "kwargs": {
+            "field_name": "id",
+            "output_field": "ID"
+          }
+        },
+        {
+          "class": "evidence_handler.core.fields.StringField",
+          "kwargs": {
+            "field_name": "status",
+            "output_field": "Authentication status"
+          }
+        }
+      ]
+    }
+  }
+}

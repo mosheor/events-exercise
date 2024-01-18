@@ -1,17 +1,23 @@
 [tool.poetry]
-name = "events-exercise"
+name = "evidences-exercise"
 version = "0.1.0"
-description = "Home assignment on dynamic parsing of raw events data"
+description = "Home assignment on dynamic parsing of raw evidences data"
 authors = ["Or Moshe <ormoshe2204@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pydantic = "^2.5.3"
+email-validator = "^2.1.0.post1"
+python-dateutil = "^2.8.2"
+fastapi = "^0.109.0"
+beanie = "^1.24.0"
+pydantic-settings = "^2.1.0"
+uvicorn = "^0.26.0"
 
 [tool.ruff]
 line-length = 120
 select = ["A", "B", "C", "E", "F", "ICN", "UP"]
+ignore = ["B905", "A002"]
 include = ["*.py"]
 target-version = "py312"
 
